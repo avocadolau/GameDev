@@ -1,0 +1,2 @@
+C:\GitHub\Game_dev\Homework1\Debug\Homework.exe
+C:\GitHub\Game_dev\Homework1\Debug\Homework.pdb

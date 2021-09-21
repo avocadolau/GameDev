@@ -1,0 +1,30 @@
+﻿  main.cpp
+C:\GitHub\Game_dev\Homework1\vec3.h(92,15): warning C4244: 'inicializando': conversión de 'double' a 'TYPE'; posible pérdida de datos
+          with
+          [
+              TYPE=int
+          ]
+C:\GitHub\Game_dev\Homework1\vec3.h(91): message : al compilar la función del miembro clase plantilla "vec3<int> vec3<int>::Normalize(void)"
+C:\GitHub\Game_dev\Homework1\main.cpp(13): message : Vea la referencia a la creación de una instancia de la función plantilla "vec3<int> vec3<int>::Normalize(void)" que se está compilando
+C:\GitHub\Game_dev\Homework1\main.cpp(7): message : Vea la referencia a la creación de una instancia de clase plantilla "vec3<int>" que se está compilando
+C:\GitHub\Game_dev\Homework1\vec3.h(88,26): warning C4244: 'argumento': conversión de 'TYPE' a 'float'; posible pérdida de datos
+          with
+          [
+              TYPE=int
+          ]
+C:\GitHub\Game_dev\Homework1\vec3.h(83): message : al compilar la función del miembro clase plantilla "TYPE vec3<TYPE>::DistanceTo(const vec3<TYPE> &) const"
+          with
+          [
+              TYPE=int
+          ]
+C:\GitHub\Game_dev\Homework1\main.cpp(16): message : Vea la referencia a la creación de una instancia de la función plantilla "TYPE vec3<TYPE>::DistanceTo(const vec3<TYPE> &) const" que se está compilando
+          with
+          [
+              TYPE=int
+          ]
+C:\GitHub\Game_dev\Homework1\vec3.h(88,15): warning C4244: 'return': conversión de 'float' a 'TYPE'; posible pérdida de datos
+          with
+          [
+              TYPE=int
+          ]
+  Homework1.vcxproj -> C:\GitHub\Game_dev\Homework1\Debug\Homework.exe
