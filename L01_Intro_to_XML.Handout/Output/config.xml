@@ -1,0 +1,18 @@
+<!-- Config file for the game -->
+<!-- L01: TODO 1: Create configuration file-->
+<config>											<!--abrir nodo-->
+	<app>
+		<title>Game Development Testbed</title>		<!--valor-->
+		<organization>UPC</organization>
+	</app>
+	<renderer>
+		<vsync value="false"/>						<!--atributo-->
+	</renderer>
+	<window>
+		<resolution width="1069" height="1069" scale="1"/>
+		<fullscreen value="false"/>
+		<borderless value="false"/>
+		<resizable value="false"/>
+		<fullscreen_window value="false"/>
+	</window>
+</config>											<!--cerrar nodo-->
