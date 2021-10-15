@@ -101,6 +101,8 @@ private:
 	float dt;
 
 	// L02: TODO 1: Create methods to request Load and Save and control variables to make sure that executes the real Load and Save at the end of the frame
+	bool Load();
+	bool Save();
 
 };
 

@@ -58,6 +58,10 @@ public:
 
     // L02: TODO 2: Create new virtual methods to LoadState / SaveState
 
+	virtual void LoadState();
+
+	virtual void SaveState();
+
 public:
 
 	SString name;

@@ -158,6 +158,8 @@ void App::PrepareUpdate()
 void App::FinishUpdate()
 {
 	// L02: TODO 1: This is a good place to call Load / Save methods
+	Load();
+	Save();
 }
 
 // Call modules before each loop iteration
@@ -269,9 +271,35 @@ const char* App::GetOrganization() const
 }
 
 // L02: TODO 1: Create methods to request load / save and methods for the real execution of load / save (to be implemented in TODO 5 and 7)
+bool Load()
+{
+
+}
+
+bool Save()
+{
+
+}
+
 
 // L02: TODO 5: Implement the method LoadFromFile() to actually load an xml file
 // then call all the modules to load themselves
+void LoadFromFile()
+{
+	/*bool ret = true;
+
+	pugi::xml_document gameStateFile;
+	pugi::xml_parse_result result = gameStateFile.load_file("savegame.xml");
+
+	if (result == NULL) {
+		LOG("Could not load xml file savegame.xml. pugi error: %s", result.description());
+		ret = false;
+	}
+	else {
+		ListItem<Module*>* item;
+		item = modules.start;
+	}*/
+}
 
 // L02: TODO 7: Implement the xml save method SaveToFile() for current state
 

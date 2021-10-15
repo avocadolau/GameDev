@@ -46,6 +46,12 @@ bool Scene::Update(float dt)
 {
 	// L02: TODO 3: Request App to Load / Save when pressing the keys L (load) / S (save)
 
+	if (app->input->GetKey(SDL_SCANCODE_L) == KEY_DOWN)
+		LoadState();
+
+	if (app->input->GetKey(SDL_SCANCODE_S) == KEY_DOWN)
+		SaveState();
+
 	if(app->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
 		app->render->camera.y -= 1;
 
