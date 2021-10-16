@@ -98,6 +98,14 @@ bool Map::CleanUp()
 
 	// L04: TODO 2: clean up all layer data
 	// Remove all layers
+	ListItem<MapLayer*>* layer;
+	layer = mapData.layers.start;
+	while (layer != NULL)
+	{
+		RELEASE(layer->data);
+		layer = layer->next;
+	}
+	mapData.layers.clear();
 
 	return true;
 
@@ -241,10 +249,21 @@ bool Map::LoadLayer(pugi::xml_node& node, MapLayer* layer)
 	bool ret = true;
 	
 	//Load the attributes and assign to the layer variables
+	layer->name = node.attribute("name").as_string();
+	layer->width = node.attribute("width").as_int();
+	layer->height = node.attribute("height").as_int();
 	
 	//Initialize the tile array and reserve the memory 
+	layer->data = new uint[layer->width * layer->height];
+	memset(layer->data, 0, layer->width * layer->height);
 	
+	int i = 0;
 	//Iterate over all the tiles in the xml and assign the values
+	for (pugi::xml_node data = node.child("data").child("tile"); data; data = data.next_sibling())
+	{
+		layer->data[i] = data.attribute("gid").as_uint();
+		i++;
+	}
 
 	return ret;
 }
@@ -256,6 +275,14 @@ bool Map::LoadAllLayers(pugi::xml_node mapNode) {
 	bool ret = true; 
 	
 	//Iterate ovel all layers in the XML and call the individual LoadLayer()
+
+	pugi::xml_node layer;
+	for (layer = mapNode.child("layer"); layer && ret; layer = layer.next_sibling("layer"))
+	{
+		MapLayer* set = new MapLayer();
+		if (ret == true) ret = LoadLayer(layer, set);
+		mapData.layers.add(set);
+	}
 
 	return ret;
 }

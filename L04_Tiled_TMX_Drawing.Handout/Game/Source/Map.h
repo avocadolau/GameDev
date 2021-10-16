@@ -42,12 +42,17 @@ enum MapTypes
 struct MapLayer
 {
 	//vars to store layer data
+	SString name;
+	int width;
+	int height;
+	uint* data;
 
 	MapLayer()
 	{}
 
 	~MapLayer()
 	{
+		RELEASE (data);				//pos lo mismo q el delete
 	}
 
 	// L04: TODO 6: Short function to get the value of x,y
@@ -66,7 +71,8 @@ struct MapData
 	List<TileSet*> tilesets;
 
 	// L04: TODO 2: Add a list/array of layers to the map
-	List<MapLayer*> maplayers;
+	List<MapLayer*> layers;
+
 };
 
 class Map : public Module
